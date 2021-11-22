@@ -1,0 +1,15 @@
+.now {
+    background-color: palevioletred;
+}
+
+.past {
+    background-color: gray;
+}
+
+.future {
+    background-color: lightgreen;
+}
+
+.event {
+    background-color: transparent;
+}
