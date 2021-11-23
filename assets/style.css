@@ -1,9 +1,14 @@
+body {
+    background-color: teal;
+}
+
 .now {
     background-color: palevioletred;
+
 }
 
 .past {
-    background-color: gray;
+    background-color: lightgray;
 }
 
 .future {
@@ -13,3 +18,14 @@
 .event {
     background-color: transparent;
 }
+
+.left-roundd {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+/* .custom-round {
+    border: 3px solid black;
+    border-radius: 10px;
+} */

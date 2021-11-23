@@ -15,23 +15,55 @@
 
 <body>
 
-    <header class="text-center my-5">
-        <h1 class="">Work Day Planner</h1>
-        <h3 id="todaysDate"></h3>
+    <header class="text-center mt-5">
+        <div class="container bg-light p-4">
+            <h1 class="">Work Day Planner</h1>
+            <h3 id="todaysDate"></h3>
+        </div>
     </header>
 
-    <div class="container">
-        <div id="hour-1" class="row">
-            <div class="col-lg-1 p-3 text-center now">8:00 am</div>
-            <div class="col-lg-10 now"><input type="textarea" class="border-0 event"></div>
+    <section class="container bg-light p-5">
+        <div id="hour-1" class="row mb-1 border-bottom">
+            <div class=" col-lg-1 p-3 text-end">8:00am</div>
+            <div class="col-lg-10 p-3 past"><input type="textarea" class="border-0 event"></div>
             <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
         </div>
-        <div id="hour-1" class="row">
-            <div class="col-lg-1 p-3 text-center future">8:00 am</div>
+        <div id="hour-2" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">9:00am</div>
+            <div class="col-lg-10 now"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+        <div id="hour-3" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">10:00am</div>
             <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
             <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
         </div>
-    </div>
+        <div id="hour-4" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">11:00am</div>
+            <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+        <div id="hour-5" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">12:00pm</div>
+            <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+        <div id="hour-6" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">1:00pm</div>
+            <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+        <div id="hour-7" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">2:00pm</div>
+            <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+        <div id="hour-8" class="row mb-1 border-bottom">
+            <div class="col-lg-1 p-3 text-end">3:00pm</div>
+            <div class="col-lg-10 future"><input type="text" class="border-0 event"></div>
+            <button type="button" data-toggle="button" aria-pressed="false" autocomplete="off" class="bi bi-gear col-lg-1 btn btn-outline-primary p-3"></button>
+        </div>
+    </section>
 
 
     <!-- Moment.js -->
