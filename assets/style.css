@@ -14,18 +14,3 @@ body {
 .future {
     background-color: lightgreen;
 }
-
-.event {
-    background-color: transparent;
-}
-
-.left-roundd {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-
-}
-
-/* .custom-round {
-    border: 3px solid black;
-    border-radius: 10px;
-} */
