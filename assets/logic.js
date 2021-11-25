@@ -71,12 +71,14 @@ function loadPage () {
 
     // Iterate through array of hour slots
     events.forEach((event, i) => {
+        
         // Determine color of hour slot based on time
         var colorClass = ''
-        if (moment(hourNow).isBefore(`${ today} ${event.hour}`, 'hour') === false) {
-            colorClass = 'past'
-        } else {
+
+        if (moment(hourNow).isBefore(`${ today} ${event.hour}`, 'hour') === true) {
             colorClass = 'future'
+        } else {
+            colorClass = 'past'
         }
 
         if (moment(hourNow).isSame(`${today} ${event.hour}`, 'hour') === true) {
@@ -92,21 +94,21 @@ function loadPage () {
         </div>`
     })
 
-    // Write output variable onto planner div
+    // Write output variable into planner div
     planner.html(output)
 
 };
 
 // If button is clicked ? unlock textarea and change icon 
 //      : lock text area and save content
-$('.container').on('click', ('button'), (e) => {
-    // Stores data from local storage
+$('.container').on('click', ('button'), (e) => { 
+    // Retrieve data from local storage and store in variable
     var events = JSON.parse(localStorage.getItem('events'))
     // Stores current target if it's a button in the planner div
     var icon = $(e.currentTarget)
-    // Stores textarea ID (index 1 in the sibling array)
+    // Stores textarea ID (index 1 in sibling array of target)
     var slot = icon.siblings()[1].id 
-    // Stores template literal to select ID
+    // Stores template literal to JQuery ID selector
     var task = $(`#${slot}`) 
 
     // Change icon in button and enable textarea
@@ -116,6 +118,7 @@ $('.container').on('click', ('button'), (e) => {
         icon.siblings().removeAttr('disabled')
     } else {
         // Change icon in button, add event text to corresponding slot, and disable textarea
+        // Save entry to local storage
         events[slot].event = task.val();
         localStorage.setItem('events', JSON.stringify(events));
         icon.removeClass('bi-save');
