@@ -1,18 +1,22 @@
 $(document).ready(loadPage);
 
-var planner = $('#planner');
+// Main area
+const planner = $('#planner');
 
+// Variables for moment.js formats to compare time
 var currHour = moment().format('H');
 var today = moment().format('YYYY-MM-DD');
 var hourNow = moment().format(`${today} ${currHour}`);
 
+// Current time in header
 $('#todaysDate').text(moment().format('dddd, MMMM D, YYYY, h:mm a'));
 
+// Storage for hour slots
 let schedule = [
     {
-        "hour": "08",
-        "time": "8:00am",
-        "event": ""
+        "hour": "08", // Hour for moment.js
+        "time": "8:00am", // Label for slot
+        "event": "" // Text in event slot
     },
     {
         "hour": "09",
@@ -56,25 +60,30 @@ let schedule = [
     }
 ];
 
+// Load the hour slots onto the page
 function loadPage () {
-    var output = ''
-    var events = JSON.parse(localStorage.getItem('events'))
+    var output = '';
+    var events = JSON.parse(localStorage.getItem('events'));
     if (events == null) {
-        localStorage.setItem('events', JSON.stringify(schedule))
-        var events = JSON.parse(localStorage.getItem('events'))
+        localStorage.setItem('events', JSON.stringify(schedule));
+        var events = JSON.parse(localStorage.getItem('events'));
     }
 
+    // Iterate through array of hour slots
     events.forEach((event, i) => {
+        // Determine color of hour slot based on time
         var colorClass = ''
-        if (moment(hourNow).isBefore(`${today} ${event.hour}`, 'hour') === false) {
+        if (moment(hourNow).isBefore(`${ today} ${event.hour}`, 'hour') === false) {
             colorClass = 'past'
         } else {
             colorClass = 'future'
         }
-        if (moment(hourNow).isSame(`${today} ${event.hour}`, 'hour') === true){
+
+        if (moment(hourNow).isSame(`${today} ${event.hour}`, 'hour') === true) {
             colorClass = 'now'
         }
-
+        
+        // Populate output variable with HTML and template literals
          output +=
         `<div class="row mb-1 border-bottom">
             <div class="col-lg-1 p-3 align-middle text-end">${event.time}</div>
@@ -83,22 +92,30 @@ function loadPage () {
         </div>`
     })
 
+    // Write output variable onto planner div
     planner.html(output)
 
 };
 
-// If click ? unlock textarea and change icon : lock text area and save content
+// If button is clicked ? unlock textarea and change icon 
+//      : lock text area and save content
 $('.container').on('click', ('button'), (e) => {
+    // Stores data from local storage
     var events = JSON.parse(localStorage.getItem('events'))
+    // Stores current target if it's a button in the planner div
     var icon = $(e.currentTarget)
-    var slot = icon.siblings()[1].id
-    var task = $(`#${slot}`)
+    // Stores textarea ID (index 1 in the sibling array)
+    var slot = icon.siblings()[1].id 
+    // Stores template literal to select ID
+    var task = $(`#${slot}`) 
 
+    // Change icon in button and enable textarea
     if (icon.attr( 'aria-pressed' ) === 'false') {
         icon.removeClass('bi-gear')
         icon.addClass('bi-save')
         icon.siblings().removeAttr('disabled')
     } else {
+        // Change icon in button, add event text to corresponding slot, and disable textarea
         events[slot].event = task.val();
         localStorage.setItem('events', JSON.stringify(events));
         icon.removeClass('bi-save');
