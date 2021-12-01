@@ -8,11 +8,16 @@ A simple planner for the 8-4 work day
 
 3. Click the save button and task or appointment will be stored.
 
+4. Past hour slots are displayed in gray, current hour slot displayed in red, future hour slots displayed in green.
+
+
+---------------------
 
 Deployed at: https://snackonevil.github.io/workdayplanner/
 Git repo: https://github.com/Snackonevil/workdayplanner
 Screenshot of App: ./assets/workdayplanner-screenshot.png
 
+---------------------
 
 Built from scratch using jQuery and Bootstrap based on the following Acceptance Criteria:
 
