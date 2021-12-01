@@ -9,14 +9,14 @@ A simple planner for the 8-4 work day
 3. Click the save button and task or appointment will be stored.
 
 
+Deployed at: https://snackonevil.github.io/workdayplanner/
+Git repo: https://github.com/Snackonevil/workdayplanner
+Screenshot of App: ./assets/workdayplanner-screenshot.png
 
 
-
-
-
+Built from scratch using jQuery and Bootstrap based on the following Acceptance Criteria:
 
 ## Acceptance Criteria
-
 ```md
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner

@@ -74,13 +74,11 @@ function loadPage () {
         
         // Determine color of hour slot based on time
         var colorClass = ''
-
         if (moment(hourNow).isBefore(`${ today} ${event.hour}`, 'hour') === true) {
             colorClass = 'future'
         } else {
             colorClass = 'past'
         }
-
         if (moment(hourNow).isSame(`${today} ${event.hour}`, 'hour') === true) {
             colorClass = 'now'
         }
