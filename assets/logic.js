@@ -17,7 +17,7 @@ let schedule = [
     {
         "hour": "08", // Hour for moment.js
         "time": "8:00am", // Label for slot
-        "event": "" // Text of event in slot
+        "event": "" // Text of event in hour slot
     },
     {
         "hour": "09",
