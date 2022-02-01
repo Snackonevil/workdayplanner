@@ -1,39 +1,42 @@
-// WORK DAY PLANNER
+# WORK DAY PLANNER
 
-A simple planner for the 8-4 work day
+![badge](https://img.shields.io/badge/license-MIT-blue)  
+by Kevin Lacson  
+Email: lacsonky@gmail.com  
+GitHub: [Snackonevil](https://github.com/Snackonevil)
 
-1. Click the settings button to enter a task or appointment for desired time slot
+---
 
-2. Enter task or appointment
+## Description
 
-3. Click the save button and task or appointment will be stored.
+A simple planner for the 8-4 workday. Past hours are displayed in gray, future hours in green. Make sure you've completed or on the way to completing those tasks in red!
 
-4. Past hour slots are displayed in gray, current hour slot displayed in red, future hour slots displayed in green.
+[APP](https://snackonevil.github.io/workdayplanner/) | [CODE](https://github.com/Snackonevil/workdayplanner)
 
+---
 
----------------------
+## Table of Contents
 
-Deployed at: https://snackonevil.github.io/workdayplanner/
-Git repo: https://github.com/Snackonevil/workdayplanner
-Screenshot of App: ./assets/workdayplanner-screenshot.png
+-   [Usage](#usage)
+-   [License](#license)
 
----------------------
+---
 
-Built from scratch using jQuery and Bootstrap based on the following Acceptance Criteria:
+## Usage
 
-## Acceptance Criteria
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+![Screenshot](/assets/workdayplanner-screenshot.png)
+
+Utilize the button on the right for the hour you would like to interact with.
+
+---
+
+## License
+
+(MIT)
+Copyright 2022 Kevin Lacson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
