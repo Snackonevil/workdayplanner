@@ -15,7 +15,7 @@ $("#todaysDate").text(moment().format("dddd, MMMM D, YYYY, h:mm a"));
 // Array of hour slots to be stored
 let schedule = [
     {
-        hour: "8", // Hour for moment.js
+        hour: "8",
         time: "8:00am", // Label for slot
         event: "", // Text of event in hour slot
     },
@@ -82,7 +82,7 @@ function loadPage() {
         } else if (parseInt(currHour) > parseInt(event.hour)) {
             colorClass = "past";
         }
-        if (currHour === event.hour) {
+        if (parseInt(currHour) === parseInt(event.hour)) {
             colorClass = "now";
         }
 
